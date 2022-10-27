@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 图标 font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- 字体 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+  <!-- css样式 -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="options">
+      <!-- 文本格式化按钮 -->
+      <!-- 加粗按钮bold -->
+      <button id="bold" class="option-button format">
+        <i class="fa-solid fa-bold"></i>
+      </button>
+      <!-- 斜体按钮 -->
+      <button id="italic" class="option-button format">
+        <i class="fa-solid fa-italic"></i>
+      </button>
+      <!-- 下划线按钮 -->
+      <button id="underline" class="option-button format">
+        <i class="fa-solid fa-underline"></i>
+      </button>
+      <!-- 删除线按钮 -->
+      <button id="strikethrough" class="option-button format">
+        <i class="fa-solid fa-strikethrough"></i>
+      </button>
+
+      <!-- 上标按钮 -->
+      <button id="superscript" class="option-button script">
+        <i class="fa-solid fa-superscript"></i>
+      </button>
+      <!-- 下标按钮 -->
+      <button id="subscript" class="option-button script">
+        <i class="fa-solid fa-subscript"></i>
+      </button>
+
+      <!-- 列表按钮 -->
+      <!-- 有序列表 -->
+      <button id="insertOrderedList" class="option-button">
+        <i class="fa-solid fa-list-ol"></i>
+      </button>
+      <!-- 无序列表 -->
+      <button id="insertUnorderedList" class="option-button">
+        <i class="fa-solid fa-list"></i>
+      </button>
+
+      <!-- 撤销Undo/Redo -->
+      <button id="undo" class="option-button">
+        <i class="fa-solid fa-rotate-left"></i>
+      </button>
+      <button id="redo" class="option-button">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+
+      <!-- 链接 -->
+      <!-- 添加链接 -->
+      <button id="createLink" class="adv-option-button">
+        <i class="fa fa-link"></i>
+      </button>
+      <!-- 移除链接 -->
+      <button id="unLink" class="adv-option-button">
+        <i class="fa fa-unlink"></i>
+      </button>
+
+      <!-- 对齐方式 -->
+      <!-- 左对齐 -->
+      <button id="justifyLeft" class="option-button align">
+        <i class="fa-solid fa-align-left"></i>
+      </button>
+      <!-- 居中对齐 -->
+      <button id="justifyCenter" class="option-button align">
+        <i class="fa-solid fa-align-center"></i>
+      </button>
+      <!-- 右对齐 -->
+      <button id="justifyRight" class="option-button align">
+        <i class="fa-solid fa-align-right"></i>
+      </button>
+      <!-- 两端对齐 -->
+      <button id="justifyFull" class="option-button align">
+        <i class="fa-solid fa-align-justify"></i>
+      </button>
+
+      <!-- 缩进 -->
+      <!-- 增加缩进 -->
+      <button id="indent" class="option-button spacing">
+        <i class="fa-solid fa-indent"></i>
+      </button>
+      <!-- 减少缩进 -->
+      <button id="outdent" class="option-button spacing">
+        <i class="fa-solid fa-outdent"></i>
+      </button>
+
+      <!-- 选择标题 -->
+      <select id="formatBlock" class="adv-option-button">
+        <option value="H1">H1</option>
+        <option value="H2">H2</option>
+        <option value="H3">H3</option>
+        <option value="H4">H4</option>
+        <option value="H5">H5</option>
+        <option value="H6">H6</option>
+      </select>
+
+      <!-- 选择字体 -->
+      <!-- 字体名称 -->
+      <select name="" id="fontName" class="adv-option-button"></select>
+      <!-- 字体大小 -->
+      <select name="" id="fontSize" class="adv-option-button"></select>
+
+      <!-- 颜色 -->
+      <div class="input-wrapper">
+        <!-- 前置颜色.即字体颜色 -->
+        <input type="color" id="foreColor" class="adv-option-button">
+        <label for="foreColor">Font Color</label>
+      </div>
+      <div class="input-wrapper">
+        <!-- 后置颜色.即背景颜色 -->
+        <input type="color" id="backColor" class="adv-option-button">
+        <label for="backColor">HightLight Color</label>
+      </div>
+    </div>
+
+    <!-- contenteditable为true时:可编辑段落 -->
+    <div id="text-input" contenteditable="true"></div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

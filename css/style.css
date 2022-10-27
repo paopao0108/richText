@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #338cf4;
+}
+
+.container {
+  background-color: #fff;
+  /* 视口单位vmin（取vw和vh中较小的一个，1vmin就是较小者划分为100份后的一份） */
+  width: 90vmin;
+  padding: 50px 30px;
+  position: absolute;
+  /* 居中对齐 */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 0 25px 50px rgba(7, 20, 35, .3);
+}
+
+.options {
+  display: flex;
+  /* 可换行 */
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+
+button {
+  height: 28px;
+  width: 28px;
+  display: grid;
+  /* justify-content: center;
+  align-content: center; */
+  place-items: center center;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  /* outline的作用 */
+  outline: none;
+  color: #020929;
+}
+
+select {
+  padding: 7px;
+  border: 1px solid #020929;
+  border-radius: 3px;
+}
+
+.options :is(label, select) {
+  font-family: "Poppins", sans-serif;
+}
+
+.input-wrapper {
+  /* 使文本和input对齐 */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/*  */
+input[type='color'] {
+  /* 改变按钮和其他控件的外观，使其类似于原生控件 
+  去除系统默认appearance的样式,常用于IOS下移除原生样式 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* 伪类::-webkit-color-swatch 是chrome用于控制内部颜色按钮的*/
+input[type='color']::-webkit-color-swatch {
+  border-radius: 14px;
+  /* 通过阴影设置颜色按钮外的边框(内层白阴影,外层黑阴影) */
+  /* box-shadow: h-shadow必需 v-shadow必需 blur spread color inset */
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000;
+}
+
+/* 伪类::-webkit-color-swatch 是fireFox用于控制内部颜色按钮的*/
+input[type='color']::-moz-color-swatch {
+  border-radius: 14px;
+  /* 通过阴影设置颜色按钮外的边框(内层白阴影,外层黑阴影) */
+  /* box-shadow: h-shadow必需 v-shadow必需 blur spread color inset */
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #000;
+}
+
+#text-input {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  height: 50vh;
+  /* 只在y方向上添加滚动条 */
+  /* overflow-y: hidden; 始终隐藏滚动条*/
+  /* overflow-y: auto; 内容溢出时显示滚动条，否则不显示 */
+  overflow-y: auto;
+  /* overflow-y: scroll; 始终显示滚动条*/
+}
+
+.active {
+  background-color: #e0e9ff;
+}
